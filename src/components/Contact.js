@@ -51,37 +51,39 @@ export default function Contact() {
           name="contact"
           onSubmit={handleSubmit}
           className="flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-gray-800 sm:text-4xl text-3xl mb-1 font-medium title-font text-center">
-            Contact Me
+          <h2 className="text-gray-800 text-5xl mb-1 italic font-serif text-center">
+            Let's Connect!
           </h2>
           <p className="leading-relaxed mb-5 text-gray-800 text-center">
-            Feel free to contact me with any professional, academic or social related queries you have.
+            I'm always looking for new opportunities and ideas. Share anything you'd like with me below.
           </p>
-          <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-800">
-              Name
-            </label>
-            <input
-              required
-              type="text"
-              id="name"
-              name="name"
-              className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-gray-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-800">
-              Email
-            </label>
-            <input
-              required
-              type="email"
-              id="email"
-              name="email"
-              className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-gray-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
-            />
+          <div className="flex justify-evenly gap-6">
+            <div className="relative mb-4 w-full">
+              <label htmlFor="name" className="leading-7 text-sm text-gray-800">
+                Name
+              </label>
+              <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-gray-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className="relative mb-4 w-full">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-800">
+                Email
+              </label>
+              <input
+                required
+                type="email"
+                id="email"
+                name="email"
+                className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-gray-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
           </div>
           <div className="relative mb-4">
             <label

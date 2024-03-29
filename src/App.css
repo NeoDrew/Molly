@@ -1,34 +1,76 @@
-.fade-in-text {
-    font-family: Arial;
-    font-size: 60px;
-    animation: fadeIn 5s;
-    -webkit-animation: fadeIn 5s;
-    -moz-animation: fadeIn 5s;
-    -o-animation: fadeIn 5s;
-    -ms-animation: fadeIn 5s;
-  }
-  
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+.fade-in-element-1 {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in-element-2 {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in-element-25 {
+  opacity: 0;
+  transition: opacity 2.5s ease-in-out;
+}
+
+.fade-in-element-3 {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+
+/* * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+.list-ic a {
+  color: #F1F5F9;
+  text-decoration: none;
+}
+.list-ic li {
+  position: relative;
+}
+.list-ic li span {
+  display: inline-block;
+  font-weight: 800;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: #10B981;
+  color: #F1F5F9;
+  position: relative;
+}
+.list-ic li::before {
+  content: '';
+  position: absolute;
+  background: #10B981;
+  z-index: -1;
+}
+
+.list-ic.vertical {
+  padding: 0;
+  margin: 0;
+}
+.list-ic.vertical li {
+  list-style-type: none;
+  text-align: left;
+}
+.list-ic.vertical li span {
+  margin: 1.4em 0;
+}
+.list-ic.vertical li::before {
+  top: -35px;
+  left: 13px;
+  width: 0.2em;
+  height: 4em;
+}
+.list-ic li:first-child::before {
+  display: none;
+}
