@@ -4,7 +4,6 @@ import Carousel from "./components/carousel";
 import { FaLinkedin, FaArrowUp } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { BiSolidRightArrow, BiSolidLeftArrow } from "react-icons/bi";
-import { useState } from "react";
 import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { GiFruitTree } from "react-icons/gi";
@@ -21,10 +20,10 @@ export default function App() {
   const bioscope = useRef(null);
   const university = useRef(null);
   let slides = [
-    "https://i.pinimg.com/originals/51/82/ac/5182ac536727d576c78a9320ac62de30.jpg",
-    "https://wallpapercave.com/wp/wp3386769.jpg",
-    "https://wallpaperaccess.com/full/809523.jpg",
-    "https://getwallpapers.com/wallpaper/full/5/c/0/606489.jpg",
+    "BioScope1.jpg",
+    "BioScope2.jpg",
+    "BioScope3.jpg",
+    "BioScope4.jpg",
   ];
 
   const fadeElements = useRef([]);
@@ -36,7 +35,7 @@ export default function App() {
 
     const callback = (entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.target instanceof Element) {
           entry.target.classList.add('fade-in');
           observer.unobserve(entry.target);
         }
@@ -46,7 +45,9 @@ export default function App() {
     const observer = new IntersectionObserver(callback, options);
 
     fadeElements.current.forEach(element => {
-      observer.observe(element);
+      if (element instanceof Element) {
+        observer.observe(element);
+      }
     });
 
     return () => {
@@ -201,23 +202,39 @@ export default function App() {
             </p>
             <div className="flex flex-col items-center justify-center h-full">
               <div className="relative w-screen h-screen text-slate-100">
-                <div className={`absolute box bg-transparent`} style={{ width: '35%', height: '32%', top: '17%', left: '15%' }}>
-                  {/* <Carousel slides={slides} className="rounded-lg" /> */}
-
-                  <ul class="list-ic vertical">
-                    <li>
-                      <span>1</span>
-                      <a className="px-2">Create accountCreate accountCreate accountCreate accountCreate accountCreate accountCreate account.</a>
-                    </li>
-                    <li>
-                      <span>2</span>
-                      <a className="px-2">Create account.</a>
-                    </li>
-                    <li>
-                      <span>3</span>
-                      <a className="px-2">Create account.</a>
-                    </li>
-                  </ul>
+                <div className={`absolute box bg-transparent shadow-lg`} style={{ width: '55%', height: '32%', top: '20%', left: '6%' }}>
+                    <Carousel slides={slides} className="rounded-lg shadow-lg" />
+                </div>
+                <div className={`absolute box bg-greeen`} style={{ width: '37%', height: '32%', top: '20%', left: '63%' }}>
+                  <div className="fade-in-element-1" ref={el => fadeElements.current.push(el)}>
+                    <ul class="pl-4 text-slate-100 text-xs lg:text-2xl font-medium leading-relaxed">
+                      <li>
+                        <span>1.</span>
+                        <a className="px-2"> Planing to join BioScope in September 2024!
+                        </a>
+                      </li>
+                      <br></br>
+                      <li>
+                        <span>2.</span>
+                        <a className="px-2">To Be Continued...</a>
+                      </li>
+                      <br></br>
+                      <li>
+                        <span>3.</span>
+                        <a className="px-2">...</a>
+                      </li>
+                      <br></br>
+                      <li>
+                        <span>4.</span>
+                        <a className="px-2">...</a>
+                      </li>
+                      <br></br>
+                      <li>
+                        <span>5.</span>
+                        <a className="px-2">...</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

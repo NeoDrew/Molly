@@ -51,15 +51,15 @@ export default function Contact() {
           name="contact"
           onSubmit={handleSubmit}
           className="flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-gray-800 text-5xl mb-1 italic font-serif text-center">
+          <h2 className="text-slate-800 text-5xl mb-1 italic font-serif text-center">
             Let's Connect!
           </h2>
-          <p className="leading-relaxed mb-5 text-gray-800 text-center">
+          <p className="leading-relaxed mb-5 text-slate-800 text-center">
             I'm always looking for new opportunities and ideas. Share anything you'd like with me below.
           </p>
           <div className="flex justify-evenly gap-6">
             <div className="relative mb-4 w-full">
-              <label htmlFor="name" className="leading-7 text-sm text-gray-800">
+              <label htmlFor="name" className="leading-7 text-sm text-slate-800">
                 Name
               </label>
               <input
@@ -67,12 +67,12 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-gray-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-slate-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="relative mb-4 w-full">
-              <label htmlFor="email" className="leading-7 text-sm text-gray-800">
+              <label htmlFor="email" className="leading-7 text-sm text-slate-800">
                 Email
               </label>
               <input
@@ -80,7 +80,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-gray-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-slate-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 text-base outline-none text-slate-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -88,14 +88,14 @@ export default function Contact() {
           <div className="relative mb-4">
             <label
               htmlFor="message"
-              className="leading-7 text-sm text-gray-800">
+              className="leading-7 text-sm text-slate-800">
               Message
             </label>
             <textarea
               required
               id="message"
               name="message"
-              className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-gray-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 h-32 text-base outline-none text-slate-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gradient-to-tl from-slate-800 to-slate-700 rounded border border-slate-700 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600 h-32 text-base outline-none text-slate-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>

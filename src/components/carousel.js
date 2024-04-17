@@ -17,7 +17,7 @@ export default function Carousel({ slides }) {
     };
 
     return (
-        <div className="relative bg-cover bg-center overflow-hidden">
+        <div className="relative bg-cover bg-center overflow-hidden shadow-lg">
             <div
                 className={`flex transition-transform ease-out duration-500`}
                 style={{
@@ -29,11 +29,11 @@ export default function Carousel({ slides }) {
                 })}
             </div>
 
-            <div className="absolute top-0 h-full w-full flex items-center justify-between px-1 md:px-5 text-white text-xl md:text-3xl">
-                <button onClick={previousSlide}>
+            <div className="absolute top-0 h-full w-full flex items-center justify-between px-1 md:px-5 text-slate-500 text-xl md:text-3xl">
+                <button className="hover:text-slate-100 transition-all duration-200 ease-in-out" onClick={previousSlide}>
                     <BsFillArrowLeftCircleFill />
                 </button>
-                <button onClick={nextSlide}>
+                <button className="hover:text-slate-100 transition-all duration-200 ease-in-out" onClick={nextSlide}>
                     <BsFillArrowRightCircleFill />
                 </button>
             </div>
@@ -46,7 +46,7 @@ export default function Carousel({ slides }) {
                                 setCurrent(i);
                             }}
                             key={"circle" + i}
-                            className={`rounded-full w-2 h-2 md:w-5 md:h-5 cursor-pointer ${i === current ? "bg-white" : "bg-gray-500"
+                            className={`rounded-full w-2 h-2 md:w-5 md:h-5 cursor-pointer transition-all duration-200 ease-in-out hover:bg-slate-400 ${i === current ? "bg-slate-50" : "bg-slate-500"
                                 }`}
                         ></div>
                     );
